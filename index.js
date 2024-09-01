@@ -5,7 +5,7 @@ const SubmissionsRouter = require("./routes/SubmissionsRoute")
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const connectMongoDB = require( './config/connect' );
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 connectMongoDB( "mongodb://localhost:27017/gdsc" ).then( () => console.log( "MongoDB connected" ) )
 app.use( express.urlencoded( { extended: false } ) );
 app.use( cors() );
