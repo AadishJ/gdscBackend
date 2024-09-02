@@ -4,7 +4,6 @@ const router = express.Router();
 
 router
     .route( "/" )
-    .get( ( req, res ) => handleGetRequest( req, res ) )
     .post( ( req, res ) => handlePostRequest( req, res ) );
 
 
